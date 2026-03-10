@@ -1,0 +1,38 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+
+export const metadata: Metadata = {
+  title: "SriRam IAS - Your Journey to UPSC Success Starts Here",
+  description: "Join SriRam IAS for the best UPSC coaching. We provide expert faculty, structured curriculum, and personal mentorship.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
+      </body>
+    </html>
+  );
+}
