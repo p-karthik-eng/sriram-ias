@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Courses from "@/components/Courses";
 import AboutUs from "@/components/AboutUs";
@@ -14,9 +14,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      <Header />
+      <Navbar />
       <main className="flex-1 w-full flex flex-col items-center">
-        <div className="smooth-wrapper">
+        <div className="smooth-wrapper mt-[70px] lg:mt-[106px]">
           <Hero />
           <Courses />
           <AboutUs />
