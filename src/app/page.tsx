@@ -18,8 +18,9 @@ export default function Home() {
       <main className="flex-1 w-full flex flex-col items-center">
         <div className="smooth-wrapper mt-[70px] lg:mt-[106px]">
           <Hero />
-          <Courses />
+          
           <AboutUs />
+          <Courses />
           <Results />
           <OfflineCenters />
           <CurrentAffairsCTA />

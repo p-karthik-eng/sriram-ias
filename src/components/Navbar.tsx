@@ -9,7 +9,7 @@ import { Suez_One } from "next/font/google";
 import {
     ChevronDown, Mail, Phone, MapPin, ArrowRight, X, Loader2, Menu, User,
     Info, FileText, Smartphone, Code, Cloud, BrainCircuit, Box, Layout, ShieldCheck, Target, Network, Layers, MonitorSmartphone, Settings, PenTool,
-    Search
+    Search, BookOpen, GraduationCap, Award, BookMarked, Users, History, Globe, Briefcase, FileSignature, Presentation
 } from "lucide-react";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
@@ -177,337 +177,260 @@ function QuoteModal({ open, onClose }: QuoteModalProps) {
 
 const homeData = [
     {
-        category: "About us",
-        desc: "Panacea delivers innovative mobile and web app solutions for modern businesses",
-        icon: <Image src="/business_solution.png" alt="About" width={24} height={24} className="object-contain" />,
+        category: "About Sriram's IAS",
+        desc: "40 years of excellence in guiding UPSC civil services aspirants.",
+        icon: <Briefcase size={24} className="text-[#132863]" />,
         items: [
-            { title: "Company Overview", desc: "Panacea delivers innovative mobile and web app solutions for modern businesses", href: "/about" },
-            { title: "Vision & Mission", desc: "Driving digital innovation with purpose and empowering businesses globally", href: "/vision" },
-            { title: "Leadership Team", desc: "Meet the experienced minds leading Panacea to digital excellence", href: "/leadership" },
-            { title: "Our Journey", desc: "14+ years of building world-class digital products across 20+ industries", href: "/journey" },
-            { title: "Awards & Recognition", desc: "Industry accolades celebrating our commitment to quality and innovation", href: "/awards" },
-            { title: "NASSCOM Membership", desc: "Proud member of India's premier IT industry association", href: "/nasscom" },
-            { title: "Life at Panacea", desc: "Explore our vibrant culture, talented people, and collaborative work environment", href: "/careers" },
+            { title: "Our Legacy", desc: "Four decades of creating civil servants and serving the nation", href: "/about/legacy" },
+            { title: "Director's Message", desc: "A visionary message from Sriram Srirangam", href: "/about/director-message" },
+            { title: "Our Core Methodology", desc: "The proven Sriram's approach to the UPSC examination", href: "/about/methodology" },
+            { title: "Offices & Centers", desc: "Explore our state-of-the-art offline presence across India", href: "#centers" }
         ],
         rightPanel: {
-            title: "ABOUT PANACEA",
+            title: "SRIRAM'S LEGACY",
             checkmarks: [
-                "ISO-Certified Enterprise IT Company",
-                "14+ Years of Industry Experience",
-                "Trusted by Global Governments & Enterprises",
-                "1500+ Apps Delivered Worldwide",
-                "Offices in Hyderabad, USA"
+                "40+ Years of UPSC Experience",
+                "Thousands of Successful Selections",
+                "India's Top Faculty Panel",
+                "Comprehensive Study Material",
+                "Personalized Mentorship"
             ],
-            buttonText: "Get in Touch",
+            buttonText: "Join Our Legacy",
             buttonLink: "/contact"
         }
     },
     {
-        category: "Blog",
-        desc: "Discover expert ideas and innovations on our Blogs",
-        icon: <Image src="/socialmedia.png" alt="Blog" width={24} height={24} className="object-contain" />,
+        category: "Leadership & Faculty",
+        desc: "Learn from the most experienced educators in the nation.",
+        icon: <Users size={24} className="text-[#132863]" />,
         items: [
-            { title: "Latest Insights", desc: "Read our newest articles and updates", href: "/blog" },
-            { title: "Tech Trends", desc: "Stay ahead with latest technology trends", href: "/blog/tech" },
-            { title: "Case Studies", desc: "In-depth analysis of our successful projects", href: "/blog/case-studies" },
+            { title: "Core Faculty Panel", desc: "Meet the experts guiding your preparation across subjects", href: "/about/faculty" },
+            { title: "Guest Lecturers", desc: "Insights from serving bureaucrats and experts", href: "/about/guest-lecturers" },
+            { title: "Dedicated Mentors", desc: "Your personal guides for academic and strategy support", href: "/about/mentors" }
         ],
         rightPanel: {
-            title: "SUBSCRIBE NOW",
+            title: "EXPERT GUIDANCE",
             checkmarks: [
-                "Weekly Tech Insights",
-                "Industry Best Practices",
-                "Exclusive Feature Updates"
+                "Decades of Subject Expertise",
+                "Dynamic Teaching Methodologies",
+                "1-on-1 Doubt Clearing Sessions"
             ],
-            buttonText: "Read Blog",
-            buttonLink: "/blog"
+            buttonText: "Meet the Faculty",
+            buttonLink: "/about/faculty"
+        }
+    },
+    {
+        category: "Results & Achievements",
+        desc: "Our results speak for our dedication to your success.",
+        icon: <Award size={24} className="text-[#132863]" />,
+        items: [
+            { title: "UPSC CSE Toppers", desc: "View our stellar selections in recent years", href: "/results/toppers" },
+            { title: "Toppers' Strategies", desc: "Learn from the success stories of our students", href: "/results/strategies" },
+            { title: "Toppers' Answer Copies", desc: "Analyze how successful candidates write their answers", href: "/results/answer-copies" },
+            { title: "Hall of Fame", desc: "Sriram's IAS alumni serving across the nation", href: "/results/hall-of-fame" }
+        ],
+        rightPanel: {
+            title: "PROVEN RESULTS",
+            checkmarks: [
+                "Consistent Top Ranks",
+                "Highest Success Rate in Final Interviews",
+                "Transparent Result Publishing"
+            ],
+            buttonText: "View Wall of Fame",
+            buttonLink: "/results/toppers"
         }
     }
 ];
 
 const servicesData = [
     {
-        category: "Software Development",
-        desc: "Delivering seamless digital experiences with expert software development.",
-        icon: <Image src="/custom_software-dev.png" alt="Software" width={24} height={24} className="object-contain" />,
+        category: "General Studies (GS)",
+        desc: "Comprehensive coverage of Prelims and Mains GS syllabus.",
+        icon: <BookOpen size={24} className="text-[#132863]" />,
         items: [
-            { title: "Mobile App Development", desc: "Custom iOS, Android & cross-platform solutions", href: "/services/mobile" },
-            { title: "Web Application Development", desc: "Scalable web apps built for your business", href: "/services/web" },
-            { title: "iOS App Development", desc: "Native iPhone apps with seamless UX", href: "/services/ios" },
-            { title: "Custom Software Development", desc: "Tailored solutions for unique business needs", href: "/services/custom" },
-            { title: "Android App Development", desc: "Robust apps for the Android ecosystem", href: "/services/android" },
-            { title: "CMS & Portal Development", desc: "Content management systems for easy updates", href: "/services/cms" },
-            { title: "iPad App Development", desc: "Optimized tablet experiences for enterprise", href: "/services/ipad" },
-            { title: "360° Photography Services", desc: "Immersive virtual tours and product views", href: "/services/photography" },
-            { title: "Flutter App Development", desc: "Cross-platform apps from a single codebase", href: "/services/flutter" },
-            { title: "Enterprise Application Development", desc: "Scalable, secure & cloud-native enterprise software", href: "/services/enterprise" },
-            { title: "React Native App Development", desc: "High-performance hybrid mobile apps", href: "/services/react-native" },
-            { title: "App Maintenance & Support", desc: "Ongoing updates, bug fixes & performance optimization", href: "/services/maintenance" },
-            { title: "Cross-Platform Development", desc: "Build once, deploy everywhere", href: "/services/cross-platform" },
+            { title: "GS Comprehensive Foundation (PCM)", desc: "10-Month extensive course for UPSC CSE", href: "/courses/gs-foundation" },
+            { title: "GS Super Core Batch", desc: "Intensive 6-Month program for advanced aspirants", href: "/courses/gs-core" },
+            { title: "GS Modular Courses", desc: "Subject-specific modules (Economy, Polity, etc.)", href: "/courses/gs-modular" },
+            { title: "Crash Courses (Prelims & Mains)", desc: "Quick revision batches before the main exam", href: "/courses/crash-courses" },
+            { title: "Weekend Foundation Batch", desc: "Designed for working professionals and college students", href: "/courses/weekend" },
+            { title: "NCERT Foundation", desc: "Building the core basics from NCERT books", href: "/courses/ncert" }
         ],
         rightPanel: {
-            title: "WHY PANACEA",
+            title: "GS FOUNDATION",
             checkmarks: [
-                "Client-Centric, Result-Driven Approach",
-                "End-to-End IT & Digital Transformation Solutions",
-                "Efficient Development with Speed & Quality",
-                "Dedicated In-House Expert Team",
-                "Proven Track Record Across 20+ Industries"
+                "Complete Syllabus Coverage",
+                "Printed Sriram's IAS Study Material",
+                "Daily Answer Writing Practice",
+                "Regular Class Tests & Evaluation",
+                "Mentorship & Support"
             ],
-            buttonText: "Explore Services",
-            buttonLink: "/services"
+            buttonText: "Enroll in GS Course",
+            buttonLink: "/signup"
         }
     },
     {
-        category: "Cloud & DevOps",
-        desc: "Scalable cloud infrastructure and CI/CD automation",
-        icon: <Image src="/cloud_devops.png" alt="Cloud" width={24} height={24} className="object-contain" />,
+        category: "Optional Subjects",
+        desc: "Specialized coaching for high-scoring UPSC Optional Subjects.",
+        icon: <Globe size={24} className="text-[#132863]" />,
         items: [
-            { title: "Cloud Strategy & Consulting", desc: "Expert guidance for cloud adoption and migration", href: "/services/cloud-consulting" },
-            { title: "AWS Cloud Services", desc: "Scalable solutions built on Amazon Web Services", href: "/services/aws" },
-            { title: "Devops & CI/CD", desc: "Automate delivery and deployment workflows", href: "/services/devops" },
-            { title: "Cloud Migration", desc: "Seamless transition to cloud infrastructure", href: "/services/cloud-migration" },
-            { title: "Cloud Managed Services", desc: "Comprehensive management of your cloud resources", href: "/services/cloud-managed" },
+            { title: "Public Administration Optional", desc: "Comprehensive syllabus coverage and answer writing", href: "/courses/pub-ad" },
+            { title: "Sociology Optional", desc: "In-depth conceptual clarity by expert faculty", href: "/courses/sociology" },
+            { title: "Geography Optional", desc: "Map-based learning and complete syllabus grasp", href: "/courses/geography" },
+            { title: "Political Science (PSIR)", desc: "Dynamic coverage with current affairs integration", href: "/courses/psir" },
+            { title: "Anthropology Optional", desc: "High-scoring concise syllabus coaching", href: "/courses/anthropology" },
+            { title: "History Optional", desc: "Thorough chronological analysis and map work", href: "/courses/history" }
         ],
         rightPanel: {
-            title: "CLOUD EXPERTISE",
+            title: "OPTIONAL MASTERY",
             checkmarks: [
-                "AWS Advanced Consulting Partner",
-                "Azure Integration Experts",
-                "Secure & Compliant Architectures",
-                "24/7 Cloud Support & Monitoring"
+                "Targeted 500+ Marks Strategy",
+                "Previous Year Question Analysis",
+                "Dedicated Optional Test Series",
+                "Personalized Answer Evaluation"
             ],
-            buttonText: "View Solutions",
-            buttonLink: "/services"
+            buttonText: "Explore Optionals",
+            buttonLink: "/courses/optionals"
         }
     },
     {
-        category: "AI & Data Intelligence",
-        desc: "AI-powered insights that transform raw data into real impact.",
-        icon: <Image src="/ai_data_intelligence.png" alt="AI" width={24} height={24} className="object-contain" />,
+        category: "CSAT & Essay",
+        desc: "Conquer the qualifying and scoring papers with ease.",
+        icon: <FileSignature size={24} className="text-[#132863]" />,
         items: [
-            { title: "AI Consulting & Strategy", desc: "Navigate the AI landscape securely", href: "/services/ai-consulting" },
-            { title: "Machine Learning Solutions", desc: "Predictive models for business growth", href: "/services/ml" },
-            { title: "Data Engineering", desc: "Robust data pipelines and architectures", href: "/services/data-engineering" },
-            { title: "Generative AI Applications", desc: "Custom LLM development and integration", href: "/services/gen-ai" },
+            { title: "CSAT Comprehensive Batch", desc: "Master quantitative aptitude, reasoning, and reading comprehension", href: "/courses/csat" },
+            { title: "CSAT Crash Course", desc: "Last-minute tips and high-yield topics", href: "/courses/csat-crash" },
+            { title: "Essay Writing Program", desc: "Learn to structure and write high-scoring essays", href: "/courses/essay" },
+            { title: "Essay Enrichment Module", desc: "Quote banks, anecdotes, and thematic preparation", href: "/courses/essay-enrichment" }
         ],
         rightPanel: {
-            title: "DATA INTELLIGENCE",
+            title: "SCORE MAXIMIZATION",
             checkmarks: [
-                "Predictive Analytics Excellence",
-                "Custom LLM Integrations",
-                "Data Privacy First Approach"
+                "Simplifying Complex Math",
+                "Structured Essay Frameworks",
+                "Extensive Practice Questions"
             ],
-            buttonText: "Explore AI",
-            buttonLink: "/services"
+            buttonText: "Boost Your Score",
+            buttonLink: "/courses"
         }
     },
     {
-        category: "Salesforce",
-        desc: "Salesforce – where businesses grow smarter and faster.",
-        icon: <Image src="/sales_force.png" alt="Salesforce" width={24} height={24} className="object-contain" />,
+        category: "Interview Guidance",
+        desc: "Prepare for the final hurdle: The UPSC Personality Test.",
+        icon: <Presentation size={24} className="text-[#132863]" />,
         items: [
-            { title: "Salesforce Consulting", desc: "Strategic planning for CRM success", href: "/services/sf-consulting" },
-            { title: "Implementation Services", desc: "End-to-end Salesforce rollout", href: "/services/sf-implementation" },
-            { title: "Lightning Migration", desc: "Upgrade to the modern Lightning UI", href: "/services/sf-lightning" },
-            { title: "Integration Services", desc: "Connect Salesforce with your ecosystem", href: "/services/sf-integration" },
+            { title: "Mock Interview Program", desc: "Panel interactions with former bureaucrats", href: "/courses/interview" },
+            { title: "DAF Analysis & Question Bank", desc: "Detailed breakdown of your Detailed Application Form", href: "/courses/daf-analysis" },
+            { title: "One-on-One Interaction", desc: "Personalized sessions with Sriram Sir", href: "/courses/one-on-one" },
+            { title: "Current Issues Bootcamp", desc: "Intensive session on burning national & international topics", href: "/courses/interview-bootcamp" }
         ],
         rightPanel: {
-            title: "SALESFORCE EXPERTS",
+            title: "PERSONALITY TEST",
             checkmarks: [
-                "Certified Salesforce Developers",
-                "Seamless Tool Integrations",
-                "Custom Dashboards & Reports",
-                "Ongoing Admin Support"
+                "Eminent Board Members",
+                "Video Recorded Mock Sessions",
+                "Detailed Feedback & Body Language Tips",
+                "Sector-Specific Issue Preparation"
             ],
-            buttonText: "Optimize CRM",
-            buttonLink: "/services"
-        }
-    },
-    {
-        category: "Design & Experience",
-        desc: "Design with purpose, experience with impact.",
-        icon: <Image src="/design_experience.png" alt="Design" width={24} height={24} className="object-contain" />,
-        items: [
-            { title: "UI/UX Design & Research", desc: "Data-driven design strategies", href: "/services/ui-ux" },
-            { title: "Wireframing & Prototyping", desc: "Visualizing concepts quickly", href: "/services/prototyping" },
-            { title: "Usability Testing", desc: "Validating designs with real users", href: "/services/testing" },
-            { title: "Brand Identity", desc: "Crafting memorable visual brands", href: "/services/branding" },
-        ],
-        rightPanel: {
-            title: "CRAFTING EXPERIENCES",
-            checkmarks: [
-                "User-Centric Methodology",
-                "Conversion-Optimized Designs",
-                "Interactive Prototypes",
-                "Accessibility Compliant (WCAG)"
-            ],
-            buttonText: "See Portfolio",
-            buttonLink: "/portfolio"
-        }
-    },
-    {
-        category: "Digital Marketing Solutions",
-        desc: "Turning clicks into customers with digital marketing solutions.",
-        icon: <Image src="/digital-marketing-services.png" alt="Marketing" width={24} height={24} className="object-contain" />,
-        items: [
-            { title: "SEO Optimization", desc: "Rank higher on search engines", href: "/services/seo" },
-            { title: "SEM / PPC Campaigns", desc: "Targeted ads for immediate ROI", href: "/services/ppc" },
-            { title: "Social Media Marketing", desc: "Engage and grow your audience", href: "/services/smm" },
-            { title: "Content Strategy", desc: "Compelling content that converts", href: "/services/content" },
-        ],
-        rightPanel: {
-            title: "GROWTH MARKETING",
-            checkmarks: [
-                "Data-Driven Strategies",
-                "Transparent Reporting",
-                "High ROI Performance Campaigns",
-                "Expert Creative Teams"
-            ],
-            buttonText: "Boost Growth",
-            buttonLink: "/services"
+            buttonText: "Book Mock Interview",
+            buttonLink: "/contact"
         }
     }
 ];
 
 const productsData = [
     {
-        category: "Management Systems",
-        desc: "Comprehensive admin and operations management tools.",
-        icon: <Image src="/education.png" alt="Management" width={24} height={24} className="object-contain" />,
+        category: "Prelims Test Series",
+        desc: "Evaluate your readiness with our UPSC-standard Prelims Mocks.",
+        icon: <Target size={24} className="text-[#132863]" />,
         items: [
-            { title: "Child Care System", desc: "Streamline daycare operations", href: "/products/child-care" },
-            { title: "School Management App", desc: "All-in-one educational platform", href: "/products/school" },
-            { title: "OMR Customization", desc: "Automated grading solutions", href: "/products/omr" },
-            { title: "Influencers App", desc: "Manage campaigns and creators", href: "/products/influencers" },
+            { title: "Prelims GS Test Series", desc: "Sectional and Full-Length GS Paper 1 Tests", href: "/test-series/prelims-gs" },
+            { title: "Prelims CSAT Test Series", desc: "Simulate exact UPSC CSAT difficulty levels", href: "/test-series/prelims-csat" },
+            { title: "All India Open Mock Tests", desc: "Compete with thousands of aspirants nationally", href: "/test-series/open-mocks" },
+            { title: "Current Affairs Revision Tests", desc: "Tests focusing purely on the last 12 months' news", href: "/test-series/prelims-ca" }
         ],
         rightPanel: {
-            title: "OUR PRODUCTS",
+            title: "PRELIMS SUCCESS",
             checkmarks: [
-                "Scalable Architectures",
-                "Easy Integration Capabilities",
-                "Secure Data Handling",
-                "Custom Tailored Deployments"
+                "Questions strictly aligned to UPSC pattern",
+                "Detailed Explanatory Notes",
+                "All India Ranking & Percentile",
+                "Subject-wise Performance Analytics"
             ],
-            buttonText: "View Products",
-            buttonLink: "/products"
+            buttonText: "Enroll Now",
+            buttonLink: "/test-series"
         }
     },
     {
-        category: "On-Demand Apps",
-        desc: "Transforming services into instant successes.",
-        icon: <Image src="/ondemand.png" alt="On Demand" width={24} height={24} className="object-contain" />,
+        category: "Mains Test Series",
+        desc: "Refine your answer writing skills and time management.",
+        icon: <PenTool size={24} className="text-[#132863]" />,
         items: [
-            { title: "Car Wash App", desc: "Book auto cleaning instantly", href: "/products/car-wash" },
-            { title: "Grocery Delivery", desc: "Hyperlocal commerce platforms", href: "/products/grocery" },
-            { title: "Ticket Booking", desc: "Event and travel reservations", href: "/products/tickets" },
-            { title: "Party Rentals", desc: "Manage inventory and bookings", href: "/products/party-rentals" },
+            { title: "GS Mains Test Series", desc: "Comprehensive tests for GS I, II, III, and IV", href: "/test-series/mains-gs" },
+            { title: "Optional Mains Test Series", desc: "Tests for History, Geography, PubAd, Sociology, etc", href: "/test-series/mains-optional" },
+            { title: "Essay Test Series", desc: "Thematic essays with detailed feedback on structure", href: "/test-series/essay-tests" },
+            { title: "Daily Answer Writing (DAW)", desc: "Consistent daily practice for continuous improvement", href: "/test-series/daw" }
         ],
         rightPanel: {
-            title: "ON-DEMAND ECONOMY",
+            title: "MAINS MASTERY",
             checkmarks: [
-                "Real-Time Tracking",
-                "Secure Payment Gateways",
-                "Admin Control Panels",
-                "Multi-Platform Support"
+                "Timely & Detailed Evaluation",
+                "Constructive Feedback by Experts",
+                "Model Answers for all Questions",
+                "Topper Copy References"
             ],
-            buttonText: "Start Building",
-            buttonLink: "/contact"
+            buttonText: "Start Writing",
+            buttonLink: "/test-series"
         }
     }
 ];
 
 const resourcesData = [
     {
-        category: "Mobile App Developers",
-        desc: "Mobile App Development - From concept to code, we create apps that connect...",
-        icon: <Image src="/custom_software-dev.png" alt="Mobile" width={24} height={24} className="object-contain" />,
+        category: "Current Affairs Initiatives",
+        desc: "Stay updated with our curated relevant news analysis.",
+        icon: <BookMarked size={24} className="text-[#132863]" />,
         items: [
-            { title: "Mobile App Developers", desc: "Full-cycle iOS & Android app specialists", href: "/hire/mobile" },
-            { title: "Native App Developers", desc: "Platform-specific apps for peak performance", href: "/hire/native" },
-            { title: "Android App Developers", desc: "Kotlin & Java experts for the Play Store", href: "/hire/android" },
-            { title: "Hybrid App Developers", desc: "Single codebase apps across iOS & Android", href: "/hire/hybrid" },
-            { title: "iOS App Developers", desc: "Swift developers for iPhone & Apple ecosystem", href: "/hire/ios" },
-            { title: "Flutter App Developers", desc: "Google's UI toolkit for beautiful cross-platform apps", href: "/hire/flutter" },
-            { title: "iPad App Developers", desc: "Tablet-optimized apps for enterprise & education", href: "/hire/ipad" },
-            { title: "React Native Developers", desc: "JavaScript-powered mobile apps with native feel", href: "/hire/react" },
-            { title: "Custom Software Developers", desc: "Bespoke solutions tailored to your workflow", href: "/hire/custom" },
+            { title: "Daily News Analysis", desc: "Key takeaways from The Hindu & Indian Express", href: "/current-affairs/daily" },
+            { title: "Mainspedia", desc: "Topic-wise compiled notes for GS Mains", href: "/current-affairs/mainspedia" },
+            { title: "Editorial Summary", desc: "Simplified breakdown of daily editorials", href: "/current-affairs/editorials" },
+            { title: "Monthly Current Affairs Magazine", desc: "Comprehensive monthly compilation for quick revision", href: "/resources/magazine" },
+            { title: "Weekly Objective Quiz", desc: "Test your weekly current affairs knowledge", href: "/current-affairs/quiz" },
+            { title: "Yojana & Kurukshetra Gist", desc: "Summaries of highly relevant government magazines", href: "/resources/yojana" }
         ],
         rightPanel: {
-            title: "HIRING MADE EASY",
+            title: "STAY UPDATED",
             checkmarks: [
-                "Pre-Vetted & Skilled IT Professionals",
-                "Flexible Hiring Models (Hourly, Dedicated, Project-Based)",
-                "Quick Onboarding & Seamless Integration",
-                "Cost-Effective Resource Engagement",
-                "Transparent Communication & Full Control"
+                "Filtered, UPSC-Relevant News",
+                "Linkage to Static Syllabus",
+                "Free Downloadable PDFs",
+                "Infographics for Easy Retention"
             ],
-            buttonText: "Start Hiring",
-            buttonLink: "/contact"
+            buttonText: "Read Today's News",
+            buttonLink: "/current-affairs"
         }
     },
     {
-        category: "Web App Developers",
-        desc: "Full-stack developers for scalable web applications.",
-        icon: <Image src="/business_solution.png" alt="Web" width={24} height={24} className="object-contain" />,
+        category: "UPSC Basics & Preparation",
+        desc: "Essential free resources to kickstart your UPSC journey.",
+        icon: <GraduationCap size={24} className="text-[#132863]" />,
         items: [
-            { title: "Frontend Developers", desc: "React, Angular, Vue experts", href: "/hire/frontend" },
-            { title: "Backend Developers", desc: "Node, Python, Java engineers", href: "/hire/backend" },
-            { title: "Full Stack Developers", desc: "End-to-end web specialists", href: "/hire/fullstack" },
-            { title: "CMS Developers", desc: "WordPress, Drupal, Shopify experts", href: "/hire/cms" },
+            { title: "UPSC Complete Syllabus", desc: "Detailed breakdown of micro-topics for Prelims & Mains", href: "/resources/syllabus" },
+            { title: "Previous Year Papers (PYQ)", desc: "Downloadable last 10 years' question papers", href: "/resources/pyq" },
+            { title: "Sriram's IAS Booklist", desc: "Recommended readings for standard preparation", href: "/resources/booklist" },
+            { title: "Preparation Strategy", desc: "Step-by-step guide for beginners", href: "/resources/strategy" },
+            { title: "Cut-off & Trend Analysis", desc: "Historical data of UPSC passing marks and question trends", href: "/resources/analysis" },
+            { title: "Downloadable Notes", desc: "Free PDFs of static GS subjects", href: "/resources/notes" }
         ],
         rightPanel: {
-            title: "TOP WEB TALENT",
+            title: "FREE RESOURCES",
             checkmarks: [
-                "Modern JS Framework Experts",
-                "Secure Backend Architects",
-                "Performance Orientated coders",
-                "Agile Methodologies"
+                "Absolutely Free Access",
+                "Extensively Researched",
+                "Updated according to latest trends",
+                "Designed to save aspirants' time"
             ],
-            buttonText: "Hire Web Devs",
-            buttonLink: "/contact"
-        }
-    },
-    {
-        category: "Enterprise & Cloud Developers",
-        desc: "AWS, DevOps and cloud infrastructure specialists.",
-        icon: <Image src="/cloud_devops.png" alt="Enterprise" width={24} height={24} className="object-contain" />,
-        items: [
-            { title: "Cloud Architects", desc: "Design scalable cloud systems", href: "/hire/architects" },
-            { title: "DevOps Engineers", desc: "CI/CD and automation specialists", href: "/hire/devops" },
-            { title: "Database Administrators", desc: "Optimize data storage & retrieval", href: "/hire/dba" },
-            { title: "Security Experts", desc: "Ensure compliance & data protection", href: "/hire/security" },
-        ],
-        rightPanel: {
-            title: "SCALE YOUR INFRA",
-            checkmarks: [
-                "AWS, Azure, GCP Experts",
-                "Zero Downtime Migrations",
-                "High Availability Architectures"
-            ],
-            buttonText: "Transform Now",
-            buttonLink: "/contact"
-        }
-    },
-    {
-        category: "Design & Creative Experts",
-        desc: "UI/UX designers and creative professionals on demand.",
-        icon: <Image src="/design_experience.png" alt="Design" width={24} height={24} className="object-contain" />,
-        items: [
-            { title: "UI/UX Designers", desc: "Craft beautiful user interfaces", href: "/hire/ui-ux" },
-            { title: "Product Designers", desc: "End-to-end product visionaries", href: "/hire/product-designers" },
-            { title: "Graphic Designers", desc: "Visual branding and assets", href: "/hire/graphics" },
-            { title: "Animators & 3D Artists", desc: "Immersive interactive media", href: "/hire/3d" },
-        ],
-        rightPanel: {
-            title: "CREATIVE MASTERY",
-            checkmarks: [
-                "Figma & Adobe CC Experts",
-                "Design Thinking Workshops",
-                "Rapid Prototyping",
-                "Pixel-Perfect Delivery"
-            ],
-            buttonText: "Hire Creatives",
-            buttonLink: "/contact"
+            buttonText: "View Resources",
+            buttonLink: "/free-resources"
         }
     }
 ];

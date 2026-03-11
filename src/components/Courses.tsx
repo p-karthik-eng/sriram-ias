@@ -11,7 +11,7 @@ const courses = [
         subtitle: "UPSC Civil Services",
         description: "Build your base with our meticulous Foundation program. Designed specifically for undergraduates and beginners, this course starts with NCERT fundamentals and gradually scales to advanced analytical concepts required for both Prelims and Mains.",
         tags: ["NCERTs", "Basic Concepts", "Prelims + Mains"],
-        image: "https://images.unsplash.com/photo-1524901548305-08eeddc35080?q=80&w=1200",
+        image: "/foundation.png", // Parliament/Government building representation
         color: "from-blue-600 to-primary",
     },
     {
@@ -20,7 +20,7 @@ const courses = [
         subtitle: "Intensive Training",
         description: "Take your preparation to the next level. This course focuses on complex multi-disciplinary analysis, answer writing mastery, and rigorous test series aimed to maximize your total score.",
         tags: ["Answer Writing", "Analysis", "Test Series"],
-        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200",
+        image: "/advanced.png", // Intense study/writing representation
         color: "from-accent to-yellow-600",
     },
     {
@@ -29,7 +29,7 @@ const courses = [
         subtitle: "Subject Mastery",
         description: "Expert guidance for high-scoring optional subjects. With specialized faculties, latest study materials, and customized test series, convert your optional subject into a strategic advantage.",
         tags: ["Expert Faculty", "Specialized Notes", "Score Maximization"],
-        image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200",
+        image: "/optional.png", // Library / Stacks of books representation
         color: "from-emerald-600 to-emerald-900",
     },
     {
@@ -38,7 +38,7 @@ const courses = [
         subtitle: "Personality Test",
         description: "The final hurdle requires finesse, not just knowledge. Our panel of retired bureaucrats and domain experts guide you through DAF analysis, mock interviews, and confidence building sessions.",
         tags: ["Mock Interviews", "DAF Analysis", "Bureaucrat Panel"],
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200",
+        image: "/interview.png", // Formal professional interview setting
         color: "from-purple-600 to-indigo-900",
     },
 ];
@@ -152,13 +152,13 @@ export default function Courses() {
                                     <img
                                         src={activeCourse.image}
                                         alt={activeCourse.title}
-                                        className="w-full h-full object-cover opacity-60 mix-blend-overlay"
+                                        className="w-full h-full object-cover opacity-80 mix-blend-overlay"
                                     />
                                 </motion.div>
 
                                 {/* Gradient Overlay */}
-                                <div className={`absolute inset-0 bg-gradient-to-br opacity-80 ${activeCourse.color}`}></div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+                                <div className={`absolute inset-0 bg-gradient-to-br opacity-40 mix-blend-multiply ${activeCourse.color}`}></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#132863] via-[#132863]/50 to-transparent"></div>
 
                                 {/* Content */}
                                 <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end text-white">
